@@ -95,7 +95,7 @@ Untuk mengatasi hal tersebut, modifier `protected` dapat digunakan agar atribut 
 
 Soal 2 terdiri dari tiga bagian pengujian, yaitu Bagian A, B, dan C. Setiap bagian dapat dikompilasi dan dijalankan melalui terminal dengan langkah-langkah berikut.
 
-### 1. Masuk ke Direktori `src`
+**1. Masuk ke Direktori `src`**
 
 Buka terminal atau Command Prompt, kemudian masuk ke folder `src`:
 
@@ -103,7 +103,7 @@ Buka terminal atau Command Prompt, kemudian masuk ke folder `src`:
 cd src
 ```
 
-### 2. Menjalankan Bagian A (`TesSoal2`)
+**2. Menjalankan Bagian A (`TesSoal2`)**
 
 Kompilasi dan jalankan program menggunakan perintah berikut:
 
@@ -112,7 +112,7 @@ javac soal2/TesSoal2.java
 java soal2.TesSoal2
 ```
 
-### 3. Menjalankan Bagian B (Pengujian Kelas `A` dan `B`)
+**3. Menjalankan Bagian B (Pengujian Kelas `A` dan `B`)**
 
 Untuk menguji urutan eksekusi constructor, buat file `TesBagianB.java` yang berisi pemanggilan objek `B` menggunakan `new B();`.
 
@@ -123,7 +123,7 @@ javac soal2/TesBagianB.java
 java soal2.TesBagianB
 ```
 
-### 4. Menjalankan Bagian C (`TesBagianC`)
+**4. Menjalankan Bagian C (`TesBagianC`)**
 
 Kompilasi dan jalankan program menggunakan perintah berikut:
 
