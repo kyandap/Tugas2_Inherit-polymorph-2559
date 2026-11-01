@@ -42,9 +42,11 @@ Sebelum menjalankan program, pastikan perangkat sudah memiliki:
 - Java Development Kit (JDK) versi 8 atau lebih baru.
 - Terminal / Command Prompt atau IDE seperti IntelliJ IDEA dan Visual Studio Code.
 
-## Cara Menjalankan Program (Soal 1)
+## Cara Menjalankan Program serta Jawaban Soal dan Analisis Konsep
 
-Program dapat dijalankan melalui terminal dengan langkah-langkah berikut.
+### Soal 1: Hierarki Perangkat Elektronik
+
+Kompilasi dan jalankan program menggunakan perintah berikut:
 
 **1. Masuk ke direktori `src`:**
 
@@ -63,10 +65,6 @@ javac soal1/TesSoal1.java
 ```bash
 java soal1.TesSoal1
 ```
-
-### Jawaban Soal dan Analisis Konsep
-
-#### Soal 1 – Pertanyaan Tambahan
 
 **Pertanyaan:**
 
@@ -95,6 +93,45 @@ Untuk mengatasi hal tersebut, modifier `protected` dapat digunakan agar atribut 
 ---
 ### Soal 2: Analisis Output, Error, dan Polimorfisme
 
+Soal 2 terdiri dari tiga bagian pengujian, yaitu Bagian A, B, dan C. Setiap bagian dapat dikompilasi dan dijalankan melalui terminal dengan langkah-langkah berikut.
+
+### 1. Masuk ke Direktori `src`
+
+Buka terminal atau Command Prompt, kemudian masuk ke folder `src`:
+
+```bash
+cd src
+```
+
+### 2. Menjalankan Bagian A (`TesSoal2`)
+
+Kompilasi dan jalankan program menggunakan perintah berikut:
+
+```bash
+javac soal2/TesSoal2.java
+java soal2.TesSoal2
+```
+
+### 3. Menjalankan Bagian B (Pengujian Kelas `A` dan `B`)
+
+Untuk menguji urutan eksekusi constructor, buat file `TesBagianB.java` yang berisi pemanggilan objek `B` menggunakan `new B();`.
+
+Kemudian, kompilasi dan jalankan dengan perintah:
+
+```bash
+javac soal2/TesBagianB.java
+java soal2.TesBagianB
+```
+
+### 4. Menjalankan Bagian C (`TesBagianC`)
+
+Kompilasi dan jalankan program menggunakan perintah berikut:
+
+```bash
+javac soal2/TesBagianC.java
+java soal2.TesBagianC
+```
+### Pertanyaan
 #### A. Polimorfisme, Upcasting, Downcasting, dan `instanceof`
 
 **1. Output Lengkap Program**
