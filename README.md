@@ -6,7 +6,7 @@
 |---|---|
 | Nama Lengkap | Kyandaru Annisa Putri |
 | NPM | 250810701100059 |
-| Kelas | A |
+| Mata Kuliah | Praktikum Pemrograman Berorientasi Objek A |
 | Repository | [Tugas2_Inherit-polymorph-2559](https://github.com/kyandap/Tugas2_Inherit-polymorph-2559) |
 
 ## Deskripsi
@@ -64,9 +64,9 @@ javac soal1/TesSoal1.java
 java soal1.TesSoal1
 ```
 
-## Jawaban Soal dan Analisis Konsep
+### Jawaban Soal dan Analisis Konsep
 
-### Soal 1 – Pertanyaan Tambahan
+#### Soal 1 – Pertanyaan Tambahan
 
 **Pertanyaan:**
 
