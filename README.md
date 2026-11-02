@@ -30,6 +30,19 @@ Tugas2_Inherit-polymorph-2559/
 │       ├── Ponsel.java
 │       ├── LaptopGaming.java
 │       └── TesSoal1.java
+│   └── soal2/
+│       ├── Hewan.java
+│       ├── Kucing.java
+│       ├── Lingkaran.java
+│       ├── A.java
+│       ├── B.java
+│       ├── Titik.java
+│       ├── TesBagianC.java
+│       └── TesSoal2.java
+│   └── soal3/
+│       ├── Titik.java
+│       ├── Garis.java
+│       ├── TesSoal3.java
 │
 ├── .gitignore
 └── README.md
@@ -224,3 +237,51 @@ Secara konseptual matematis, hubungan tersebut tidak tepat dan berpotensi melang
 **Konsekuensi dari Inkonsistensi Hierarki**
 
 Method atau sistem lain yang mengharapkan objek `Lingkaran` memiliki luas lebih dari nol dapat mengalami kesalahan logika ketika menerima objek `Titik`. Contohnya, operasi pembagian dengan luas dapat menyebabkan pembagian dengan nol (*division by zero*).
+
+### Soal 3: Titik dan Garis (Composition, Aliasing, & Defensive Copy)
+Untuk mengkompilasi dan menjalankan program Soal 3, gunakan langkah-langkah berikut melalui terminal:
+
+**1. Masuk ke Direktori `src`**
+
+Buka terminal atau Command Prompt, kemudian masuk ke folder `src`:
+
+```bash
+cd src
+```
+
+**2. Compile dan Jalankan Program**
+
+Kompilasi dan jalankan program menggunakan perintah berikut:
+
+```bash
+javac soal3/TesSoal3.java
+java soal3.TesSoal3
+```
+
+### Pertanyaan
+#### 1. Prediksi dan Hasil Output Baris Kedua
+```java
+  (100.0, 1.0) - (5.0, 5.0)
+```
+erjadi fenomena aliasing. Objek t direferensikan secara langsung oleh g2 pada titik awalnya. Ketika nilai t diubah dari luar menggunakan t.setX(100), titik awal pada g2 ikut berubah karena menunjuk ke alamat memori yang sama.
+
+#### 2. Perbaikan dengan Defensive Copy
+Untuk mencegah efek samping dari aliasing, constructor yang menerima objek Titik harus melakukan salinan defensif (defensive copy):
+```java
+  public Garis(Titik awal, Titik akhir) {
+    this.awal = new Titik(awal.getX(), awal.getY());
+    this.akhir = new Titik(akhir.getX(), akhir.getY());
+}
+```
+**Output Setelah Diperbaiki:**
+```java
+  (1.0, 1.0) - (5.0, 5.0)
+```
+*(Nilai g2 tetap aman dan tidak berubah meskipun t.setX(100) dipanggil dari luar).*
+
+#### 3. Kapan Perilaku Sebelum vs Sesudah Perbaikan Lebih Tepat?
+**Sebelum Perbaikan (Tanpa Defensive Copy):** Tepat digunakan jika kita menginginkan shared reference (ikatan langsung), di mana jika objek luar (seperti posisi objek dalam game atau grafik real-time) bergerak, garis yang dibentuknya otomatis ikut terbarui tanpa perlu memperbarui garis secara manual.
+**Sesudah Perbaikan (Dengan Defensive Copy):** Tepat digunakan untuk menjaga integritas data (encapsulation), keamanan, dan menghindari side-effect yang tidak diinginkan di mana bagian luar program dapat merusak state internal objek tanpa izin.
+
+#### 4. Analisis Desain yang muncul ditinjau dari relasi is-a dan has-a jika Garis extends Titik
+Secara konseptual geometri, sebuah garis bukanlah sebuah titik (Garis is-a Titik adalah tidak logis). Garis memiliki dua buah titik (Garis has-a Titik), sehingga hubungan yang benar adalah Composition (has-a), bukan Inheritance (is-a). Jika menggunakan extends Titik, sebuah garis hanya akan memiliki satu titik (warisan dari Titik), padahal garis membutuhkan dua titik (awal dan akhir). Memaksa pewarisan tunggal untuk struktur yang membutuhkan komponen ganda akan merusak desain hierarki kelas.
