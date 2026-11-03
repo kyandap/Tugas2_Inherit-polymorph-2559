@@ -42,7 +42,14 @@ Tugas2_Inherit-polymorph-2559/
 │   └── soal3/
 │       ├── Titik.java
 │       ├── Garis.java
-│       ├── TesSoal3.java
+│       └── TesSoal3.java
+│   └── soal4/
+│       ├── Produk.java
+│       ├── ProdukFisik.java
+│       ├── ProdukDigital.java
+│       ├── Langganan.java
+│       ├── Keranjang.java
+│       └── TesSoal4.java
 │
 ├── .gitignore
 └── README.md
@@ -285,3 +292,4 @@ Untuk mencegah efek samping dari aliasing, constructor yang menerima objek Titik
 
 #### 4. Analisis Desain yang muncul ditinjau dari relasi is-a dan has-a jika Garis extends Titik
 Secara konseptual geometri, sebuah garis bukanlah sebuah titik (Garis is-a Titik adalah tidak logis). Garis memiliki dua buah titik (Garis has-a Titik), sehingga hubungan yang benar adalah Composition (has-a), bukan Inheritance (is-a). Jika menggunakan extends Titik, sebuah garis hanya akan memiliki satu titik (warisan dari Titik), padahal garis membutuhkan dua titik (awal dan akhir). Memaksa pewarisan tunggal untuk struktur yang membutuhkan komponen ganda akan merusak desain hierarki kelas.
+
