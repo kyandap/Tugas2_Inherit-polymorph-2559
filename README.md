@@ -293,3 +293,23 @@ Untuk mencegah efek samping dari aliasing, constructor yang menerima objek Titik
 #### 4. Analisis Desain yang muncul ditinjau dari relasi is-a dan has-a jika Garis extends Titik
 Secara konseptual geometri, sebuah garis bukanlah sebuah titik (Garis is-a Titik adalah tidak logis). Garis memiliki dua buah titik (Garis has-a Titik), sehingga hubungan yang benar adalah Composition (has-a), bukan Inheritance (is-a). Jika menggunakan extends Titik, sebuah garis hanya akan memiliki satu titik (warisan dari Titik), padahal garis membutuhkan dua titik (awal dan akhir). Memaksa pewarisan tunggal untuk struktur yang membutuhkan komponen ganda akan merusak desain hierarki kelas.
 
+### Soal 4: Mini Project Toko Digital (Inheritance, Composition, Polymorphism, & Exception Handling)
+
+Untuk mengkompilasi dan menjalankan program Soal 3, gunakan langkah-langkah berikut melalui terminal:
+
+**1. Masuk ke Direktori `src`**
+
+Buka terminal atau Command Prompt, kemudian masuk ke folder `src`:
+
+```bash
+cd src
+```
+
+**2. Compile dan Jalankan Program**
+
+Kompilasi dan jalankan program menggunakan perintah berikut:
+
+```bash
+javac soal4/TesSoal4.java
+java soal4.TesSoal4
+```
