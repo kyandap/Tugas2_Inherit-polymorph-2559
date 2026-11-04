@@ -85,7 +85,7 @@ javac soal1/TesSoal1.java
 ```bash
 java soal1.TesSoal1
 ```
-[Output Soal 1](img/Soal1.png)
+[Output Soal 1](img/Soal1.PNG)
 
 **Pertanyaan:**
 
@@ -152,9 +152,9 @@ Kompilasi dan jalankan program menggunakan perintah berikut:
 javac soal2/TesBagianC.java
 java soal2.TesBagianC
 ```
-[Output Soal 2 - A](img/Soal2-A.png)
-[Output Soal 2 - B](img/Soal2-B.png)
-[Output Soal 2 - C](img/Soal2-C.png)
+[Output Soal 2 - A](img/Soal2-A.PNG)
+[Output Soal 2 - B](img/Soal2-B.PNG)
+[Output Soal 2 - C](img/Soal2-C.PNG)
 
 ### Pertanyaan
 #### A. Polimorfisme, Upcasting, Downcasting, dan `instanceof`
@@ -269,7 +269,7 @@ Kompilasi dan jalankan program menggunakan perintah berikut:
 javac soal3/TesSoal3.java
 java soal3.TesSoal3
 ```
-[Output Soal 3](img/Soal3.png)
+[Output Soal 3](img/Soal3.PNG)
 
 ### Pertanyaan
 #### 1. Prediksi dan Hasil Output Baris Kedua
@@ -319,7 +319,7 @@ Kompilasi dan jalankan program menggunakan perintah berikut:
 javac soal4/TesSoal4.java
 java soal4.TesSoal4
 ```
-[Output Soal 4](img/Soal4.png)
+[Output Soal 4](img/Soal4.PNG)
 
 ### Bagian Analisis Konsep
 #### 1. Apa perbedaan method overriding dan method overloading? Tunjukkan satu contoh masing-masing dari kode kalian dan jelaskan kaitannya dengan inheritance dan polimorfisme.
