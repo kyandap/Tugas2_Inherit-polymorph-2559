@@ -85,6 +85,7 @@ javac soal1/TesSoal1.java
 ```bash
 java soal1.TesSoal1
 ```
+[Output Soal 1](img/Soal1.png)
 
 **Pertanyaan:**
 
@@ -151,6 +152,10 @@ Kompilasi dan jalankan program menggunakan perintah berikut:
 javac soal2/TesBagianC.java
 java soal2.TesBagianC
 ```
+[Output Soal 2 - A](img/Soal2-A.png)
+[Output Soal 2 - B](img/Soal2-B.png)
+[Output Soal 2 - C](img/Soal2-C.png)
+
 ### Pertanyaan
 #### A. Polimorfisme, Upcasting, Downcasting, dan `instanceof`
 
@@ -264,6 +269,7 @@ Kompilasi dan jalankan program menggunakan perintah berikut:
 javac soal3/TesSoal3.java
 java soal3.TesSoal3
 ```
+[Output Soal 3](img/Soal3.png)
 
 ### Pertanyaan
 #### 1. Prediksi dan Hasil Output Baris Kedua
@@ -313,3 +319,14 @@ Kompilasi dan jalankan program menggunakan perintah berikut:
 javac soal4/TesSoal4.java
 java soal4.TesSoal4
 ```
+[Output Soal 4](img/Soal4.png)
+
+### Bagian Analisis Konsep
+#### 1. Apa perbedaan method overriding dan method overloading? Tunjukkan satu contoh masing-masing dari kode kalian dan jelaskan kaitannya dengan inheritance dan polimorfisme.
+Method overloading terjadi ketika kita membuat beberapa method dengan nama sama tetapi parameter berbeda dalam satu kelas yang sama, sedangkan overriding adalah ketika subclass menulis ulang method dari superclass-nya dengan nama dan parameter yang persis sama. Contoh overloading terdapat pada constructor `Garis(Titik, Titik)` dan `Garis(double, double, double, double)` di Soal 3. Contoh overriding tampak pada method `hitungHargaAkhir()` yang diimplementasikan secara berbeda oleh `ProdukFisik` dan `ProdukDigital` di Soal 4. Overloading terkait dengan fleksibilitas pemanggilan (compile-time), sedangkan overriding berkaitan erat dengan inheritance dan dynamic dispatch (runtime polimorfisme).
+
+#### 2. Kapan memilih inheritance dan kapan memilih composition? Beri satu contoh dari tugas ini untuk masing-masing.
+Inheritance dipilih ketika terdapat hubungan hierarki murni yang bersifat is-a, di mana subclass merupakan bentuk khusus dari superclass-nya. Sebaliknya, composition dipilih ketika suatu objek "memiliki" objek lain (has-a) sebagai komponen penyusunnya tanpa harus mewarisi sifat-sifatnya. Contoh inheritance dalam tugas ini adalah `ProdukDigital` yang memperluas kelas `Produk` pada Soal 4. Contoh composition dapat dilihat pada kelas `Garis` yang dibentuk dari dua objek `Titik` pada Soal 3.
+
+#### 3. Pada Soal 4, mengapa cetakStruk() tidak memerlukan instanceof sedangkan hitungPerJenis() memerlukannya? Mengapa downcasting tidak selalu aman?
+Method `cetakStruk()` tidak memerlukan `instanceof` karena memanfaatkan polimorfisme murni, di mana setiap objek secara otomatis mengeksekusi method-nya sendiri melalui dynamic dispatch. Sebaliknya, `hitungPerJenis()` memerlukan `instanceof` dan downcasting karena kita perlu mengidentifikasi serta menghitung jumlah masing-masing jenis produk secara spesifik dari list umum bertipe `Produk`. Downcasting tidak selalu aman karena jika kita memaksa mengonversi suatu objek ke tipe subclass yang salah, program akan mengalami crash dan melempar ClassCastException saat runtime.

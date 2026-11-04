@@ -15,4 +15,8 @@ public class B extends A {
     public void init() {
         System.out.println("init B, nilai=" + nilai);
     }
+    
+    public static void main(String[] args) {
+    new B();
+    }
 }
